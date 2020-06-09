@@ -1,0 +1,18 @@
+CREATE TABLE public.options_data
+(
+    ticker character varying(40),
+    date date,
+    "time" time(10) with time zone,
+    open double precision,
+    high double precision,
+    low double precision,
+    close double precision,
+    volume bigint,
+    open_interest bigint
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.options_data
+    OWNER to postgres;

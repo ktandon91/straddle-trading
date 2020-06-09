@@ -1,0 +1,30 @@
+CREATE TABLE public.index
+(
+    symbol character varying(30),
+    date date,
+    "time" time(10) without time zone,
+    open integer,
+    high integer,
+    low integer,
+    close integer,
+    volume integer
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.index
+    OWNER to postgres;
+
+
+ALTER TABLE public.index
+    ALTER COLUMN open TYPE double precision ;
+
+ALTER TABLE public.index
+    ALTER COLUMN high TYPE double precision ;
+
+ALTER TABLE public.index
+    ALTER COLUMN low TYPE double precision ;
+
+ALTER TABLE public.index
+    ALTER COLUMN close TYPE double precision ;
